@@ -1,0 +1,127 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+:root {
+  --primary: dodgerblue;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+body #root {
+  min-width: inherit;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+body #root .todo_container {
+  --border_radius: 10px;
+  --min_height: 2.5rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #adadad;
+  border-radius: var(--border_radius);
+  padding: 1rem;
+  margin: 5rem auto;
+}
+body #root .todo_container form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  row-gap: 1rem;
+  min-height: var(--min_height);
+  margin: 1rem 0 1rem 0;
+}
+body #root .todo_container form input {
+  flex: 1;
+  min-width: 75%;
+  height: var(--min_height);
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #adadad;
+  padding-left: 1rem;
+  transition: all 0.3s ease-out;
+}
+body #root .todo_container form input::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 1rem;
+  color: #adadad;
+}
+body #root .todo_container form input:-moz-placeholder {
+  text-align: center;
+  font-size: 1rem;
+  color: #adadad;
+}
+body #root .todo_container form input:focus {
+  border: 1px solid #787878;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+body #root .todo_container form button {
+  width: 7.5rem;
+  height: var(--min_height);
+  color: white;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+body #root .todo_container .task {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  border: 1px solid #adadad;
+  min-height: var(--min_height);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 0 0.25rem 0;
+  transition: background-color 0.3s ease-out, border 0.3s ease-out;
+}
+body #root .todo_container .task input[type=text] {
+  flex: 1;
+  min-width: 50%;
+  height: var(--min_height);
+  padding-left: 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+body #root .todo_container .task button {
+  width: 7.5rem;
+  height: var(--min_height);
+  color: white;
+  border-radius: 5px;
+  background-color: red;
+  border: 2px solid red;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+body #root .todo_container .task button:hover {
+  background-color: #e40d0d;
+  border: 1px solid #e40d0d;
+}
+body #root .todo_container .task:is(.complete) {
+  background-color: rgba(30, 144, 255, 0.2);
+  border: 1px solid rgba(30, 144, 255, 0.8);
+}
+body #root .todo_container .count {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+body #root .todo_container .count span {
+  font-weight: normal;
+  color: dodgerblue;
+}/*# sourceMappingURL=index.css.map */
